@@ -11,7 +11,9 @@ public abstract class Empleado {
     private Empresa ownedByEmpresa;
 
     public Empleado(String nombre, String documento, int edad, float salarioBase, CategoriaEmpleado categoriaEmpleado, float descuentosSalud, float descuentoPension) {
-        this.nombre = nombre;
+        if (salarioBase < 0) {
+            throw new IllegalArgumentException("El salario base no puede ser negativo");
+        } this.nombre = nombre;
         this.documento = documento;
         this.edad = edad;
         this.salarioBase = salarioBase;

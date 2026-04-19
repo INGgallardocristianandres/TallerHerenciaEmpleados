@@ -75,5 +75,26 @@ public class Empresa {
         return listaEmpleados;
     }
 
+    public ArrayList<Empleado> obtenerEmpleadosMayorSalarioNeto(double valor) {
+        ArrayList<Empleado> listaEmpleadosMayoresSalarios = new ArrayList<>();
+        for (Empleado empleado : listaEmpleados) {
+            if (empleado.calcularSalarioNeto() > valor) {
 
+                listaEmpleadosMayoresSalarios.add(empleado);
+            }
+        }
+        return listaEmpleadosMayoresSalarios;
+    }
+    public List<EmpleadoTemporal> obtenerEmpleadosTemporales100Horas(int diasTrabajados){
+    List<EmpleadoTemporal> listaEmpleados100Horas = new ArrayList<>();
+    for(Empleado empleado : listaEmpleados)
+    if(empleado instanceof EmpleadoTemporal){
+        EmpleadoTemporal temporal = (EmpleadoTemporal) empleado;
+        if (temporal.getDiasTrabajados() > diasTrabajados) {
+            listaEmpleados100Horas.add(temporal);
+        }
+    }
+    return listaEmpleados100Horas;
+    }
 }
+

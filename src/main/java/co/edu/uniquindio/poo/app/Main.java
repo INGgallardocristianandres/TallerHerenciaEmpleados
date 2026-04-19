@@ -111,8 +111,10 @@ public class Main {
                                 salarioBaseTemporal,
                                 categoriaT,
                                 descuentoSaludTemporal,
+                                descuentoPensionTemporal,
                                 diasTrabajadosEmpleadoTemporal,
                                 valorDiaEmpleadoTemporal
+
                         );
 
 
